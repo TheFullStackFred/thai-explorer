@@ -3,12 +3,12 @@ const router = express.Router()
 
 const {
   getDestinations,
-  setDestination,
+  addDestination,
   updateDestination,
   deleteDestination
 } = require('../controller/destinationController')
 
-router.route('/').get(getDestinations).post(setDestination)
+router.route('/').get(getDestinations).post(addDestination)
 
 router.route('/:id').put(updateDestination).delete(deleteDestination)
 
