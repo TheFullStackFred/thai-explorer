@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <nav className='mb-8 shadow-lg navbar'>
       <div className='container mx-auto'>
-        <div className='flex-1'>
+        <div className='flex-1 text-nowrap'>
           <Link to='/' className='text-lg font-bold'>
             Thai Explorer
           </Link>
@@ -21,7 +21,7 @@ const Navbar = () => {
       </div>
       <div className='dropdown dropdown-end'>
         <div tabIndex={0} role='button' className='btn btn-ghost xs:hidden'>
-          <RxHamburgerMenu />
+          <RxHamburgerMenu size={25} />
         </div>
         <ul
           tabIndex={0}
