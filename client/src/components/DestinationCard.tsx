@@ -9,6 +9,7 @@ type Props = {
 }
 
 const DestinationCard = ({ destination }: Props) => {
+  console.log(destination.imageUrl.length)
   return (
     <div className='overflow-hidden shadow-xl card'>
       <img
