@@ -4,6 +4,7 @@ import {
   useRouteError
 } from 'react-router-dom'
 import Navbar from '../components/layout/Navbar'
+import Button from '../components/ui/Button'
 
 const ErrorPage = () => {
   const error = useRouteError()
@@ -20,9 +21,9 @@ const ErrorPage = () => {
             ? 'This page does not exist.'
             : 'An unexpected error occurred.'}
         </p>
-        <button className='btn-secondary btn' onClick={() => navigate('/')}>
+        <Button className='btn-error' onClick={() => navigate('/')}>
           Back Home
-        </button>
+        </Button>
       </div>
     </>
   )
