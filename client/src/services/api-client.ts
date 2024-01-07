@@ -1,6 +1,6 @@
 import axios, { AxiosRequestConfig } from 'axios'
 
-export type FetchResponse<T> = T[]
+export type FetchResponse<T> = T[] | undefined
 
 const axiosInstance = axios.create({
   baseURL: 'http://localhost:3000/api'
