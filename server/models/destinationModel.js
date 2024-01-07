@@ -11,13 +11,19 @@ const destinationSchema = mongoose.Schema(
       required: [true, 'Description is required']
     },
     imageUrl: {
-      type: String,
-      required: [true, 'Image URL is required']
+      type: [String],
+      validate: {
+        validator: (arr) =>
+          arr &&
+          arr.every((url) => typeof url === 'string' && url.trim() !== ''),
+        message: 'At least one image URL is required'
+      }
     },
     tags: {
       type: [String],
       validate: {
-        validator: (tagsArray) => tagsArray && tagsArray.length > 0,
+        validator: (arr) =>
+          arr && arr.every((tag) => typeof tag === 'string' && tag !== ''),
         message: 'At least one tag is required'
       }
     }
