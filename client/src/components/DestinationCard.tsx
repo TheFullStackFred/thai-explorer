@@ -10,7 +10,7 @@ type Props = {
 
 const DestinationCard = ({ destination }: Props) => {
   return (
-    <div className='overflow-hidden shadow-lg bg-base-200 card'>
+    <div className='overflow-hidden shadow-xl bg-base-200 card'>
       <img
         src={selectRandomImageUrl(destination.imageUrl)}
         alt={destination.name}
