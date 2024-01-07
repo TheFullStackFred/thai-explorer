@@ -9,7 +9,9 @@ const HomePage = () => {
 
   return (
     <div className='grid grid-cols-5'>
-      <Hero images={imagesUrls} />
+      <div className='col-span-5 mb-8'>
+        <Hero images={imagesUrls} />
+      </div>
       <div className='col-span-5'>
         <DestinationsGrid destinations={data ?? []} />
       </div>
